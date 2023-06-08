@@ -1,6 +1,5 @@
 import mysql.connector as mysql
 from datetime import datetime, timedelta
-import math
 
 # Mengambil isi loker
 def ambilLoker():
@@ -83,5 +82,5 @@ def calculateHarga(dateAmbil, dateSimpan, lokerType):
     elif((dateAmbil-dateSimpan).days <= 2 and lokerType == 'small'):
         price = (dateAmbil-dateSimpan).days * 15000    
 
-    return math.ceil(price)
+    return price
 
