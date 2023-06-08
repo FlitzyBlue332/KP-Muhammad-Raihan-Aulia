@@ -21,7 +21,8 @@ def ambilLoker():
         userinput = int(input())
         if(userinput in range(len(lokers))):
             loker = lokers[userinput]
-            password = input(password)
+            print("> Masukkan Password: ", end='')
+            password = input()
             if(password == loker[3]):
                 dateSimpan = loker[8]
                 dateAmbil = datetime.now().date()
@@ -31,7 +32,7 @@ def ambilLoker():
                 setEmpty(conn, id_loker)
                 addTransaction(conn, id_loker, harga)
             else:
-                print("password salah, masukkan ulang")
+                print("password salah!!!")
 
             # tunjukan ulang
             lokers = showOnlyFilled(conn)
